@@ -1,0 +1,25 @@
+package lt2girlware.features.modules.combat;
+
+import meteordevelopment.orbit.EventHandler;
+import net.minecraft.util.hit.EntityHitResult;
+import lt2girlware.events.impl.EventAttack;
+import lt2girlware.events.impl.EventHandleBlockBreaking;
+import lt2girlware.features.modules.Module;
+
+public class AntiLegitMiss extends Module {
+    public AntiLegitMiss() {
+        super("AntiLegitMiss", Category.COMBAT);
+    }
+
+    @EventHandler
+    public void onAttack(EventAttack e) {
+        if (!(mc.crosshairTarget instanceof EntityHitResult) && e.isPre())
+            e.cancel();
+    }
+
+    @EventHandler
+    public void onBlockBreaking(EventHandleBlockBreaking e) {
+        if (!(mc.crosshairTarget instanceof EntityHitResult))
+            e.cancel();
+    }
+}
