@@ -1,4 +1,4 @@
-package thunder.hack.features.modules.combat;
+package lt2girlware.features.modules.movement;
 
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,12 +8,12 @@ import net.minecraft.network.packet.c2s.play.PlayerInteractItemC2SPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
-import thunder.hack.events.impl.PlayerUpdateEvent;
-import thunder.hack.features.modules.Module;
-import thunder.hack.core.manager.client.ModuleManager;
-import thunder.hack.setting.Setting;
+import lt2girlware.events.impl.PlayerUpdateEvent;
+import lt2girlware.features.modules.Module;
+import lt2girlware.core.manager.client.ModuleManager;
+import lt2girlware.setting.Setting;
 
-import static thunder.hack.utility.math.MathUtility.random;
+import static lt2girlware.utility.math.MathUtility.random;
 
 public class ElytraTarget extends Module {
 
